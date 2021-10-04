@@ -18,16 +18,21 @@ ul, li {
 }
 
 h1{
-  font-size: 2.5rem;
+  font-size: 3.25rem;
 }
 
-h1, h2{
+h1, h2, h3 {
   color: #0c0c0c;
 }
 
 h2{
+  font-size: 2.5rem;
+}
+
+h3 {
   font-size: 2rem;
 }
+
 nav{
   background-color: #ffd15e;
   box-shadow:1px 7px 8px -5px rgba(46,46,46,0.58);
@@ -43,7 +48,7 @@ img{
   /* margin-right: 32px; */
 }
 
-nav, .hero, footer{
+nav, .hero, footer, .contact-me {
   padding-left: 4rem;
   padding-right: 4rem;
 }
@@ -84,25 +89,29 @@ background-size: cover;
   align-items: center;
 }
 
-.name{
-  padding: 0 1rem;
- background-color: 
- #ffd15e;
- color: rgb(26, 26, 26);
+.hamburger {
+  display: none;
 }
 
-h3{
-  font-size: 2rem;
+.name{
+  padding: 0 1rem;
+ background-color:#ffd15e;
+ color: rgb(26, 26, 26);
+ border-radius: 8px;
+}
+
+.outline-heading {
   margin-top: 1rem;
   padding: 0 1rem;
   display: inline-block;
-   color: rgb(255, 255, 255);
+  color: rgb(255, 255, 255);
   text-shadow: 1px 1px 1px rgb(14, 14, 14), 0 -1px 1px rgb(14, 14, 14), 1px 1px 1px rgb(14, 14, 14), -1px 0 0 rgb(14, 14, 14), 1px 1px 0 rgb(14, 14, 14), 1px 0 0 #000, 0 -1px 0 #000;
   transition: background-colour 150ms ease-in;
 }
 
-h3:hover{
+.outline-heading:hover{
 background-color: #50f3cc;
+border-radius: 1rem;
 }
 
 .eddy-image{
@@ -120,7 +129,7 @@ background-color: #50f3cc;
 
 .emo-hi{
   display: inline;
-  width: 30px;
+  width: 45px;
 }
 
 .emoji{
@@ -195,6 +204,9 @@ p{
   background-color: rgb(242, 242, 242);
 }
 
+.my-skill .outline-heading{
+  color:rgb(242,242,242);
+}
 .skills{
   padding-top: 3rem;
   align-self: center;
@@ -261,12 +273,11 @@ p{
   margin-top: 2rem;
   padding: 0.5rem 1rem;
   border-radius: 2rem;
+  border-color: #ffd15e;
   background-color: whitesmoke;
   transition: background-color 150ms ease-in;
   transition: transform 200ms ease-in;
 }
-
-
 
 .work-grid button:hover{
   /* background-color: #f2c657; */
@@ -275,4 +286,105 @@ p{
 
 .work-grid button:active {
   background-color: rgb(220, 219, 219);
+}
+
+/* Contact me section */
+.contact-me{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-row-gap: 3rem;
+  grid-column-gap: 6rem;
+  padding-top: 3rem; 
+  padding-bottom: 4rem; 
+  background-color: rgb(242, 242, 242);
+}
+
+.contact-me-thanks{
+  font-size: 24px;
+ padding: 0 3rem;
+}
+
+ .resume{
+   font-size: 24px;
+   text-decoration: underline;
+   display:flex;
+   align-items: center;
+   justify-content: center;
+ }
+
+ .resume:active {
+  color:#ffd15e;
+}
+
+ .arrow-icon{
+   margin: 10px;
+   display: inline;
+   width: 40px;
+   transition: transform 300ms ease-in;
+ }
+ .arrow-icon:hover {
+  transform: scale(1.5);
+}
+
+/* Mobile css */
+@media only screen and (max-width:600px) {
+  .two-columns, .work-grid, .contact-me {
+    grid-template-columns: 1fr;
+  }
+
+  .flex-container {
+    flex-direction: column;
+  }
+
+  .skills1 {
+    width: auto;
+    margin: 0 0 2rem;
+  }
+
+  .skills1:first-child {
+    margin-top: 2rem;
+  }
+
+  .grid-area {
+    margin: 0;
+  }
+
+  nav, .hero, footer, .contact-me, .work-grid, .flex-container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .contact-me-thanks {
+    text-align: center;
+  }
+
+  .arrow-down {
+    display: none;
+  }
+
+  .eddy-image {
+    width: 100%;
+  }
+
+  .hero, .two-columns {
+    grid-row-gap: 2rem;
+  }
+  .hero h1 {
+    text-align: center;
+  }
+
+  .nav-links--desktop {
+    display: none;
+  }
+
+  .hamburger {
+    display: initial;
+  }
+
+  .copyright {
+    padding: 0;
+  }
+  .social-links {
+    display: flex;
+  }
 }
